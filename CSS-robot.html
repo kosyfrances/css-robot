@@ -46,14 +46,14 @@
     }
     .brain {      
       background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
-      background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+      background: webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
       background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
       background-size: 75px 150px;
       height: 150px; 
       width: 150px;
-      border-radius: 60px 60px 0 0;
-      border-bottom: 40px dotted #666;
-      position: absolute;
+      border-radius: 60px 60px 10px 10px;
+      border-bottom: 40px solid #666;
+      position: relative;
       left: 70px;
     }
     .torso {
@@ -63,8 +63,6 @@
       border-left: 75px solid transparent;
       border-right: 75px solid transparent;
       border-radius: 20px 20px 100px 100px;
-      position: relative;
-      top: 190px;
     }
     .left {
       font-family: 'Poller One', verdana, arial, sans-serif;
@@ -100,7 +98,7 @@
       border: 15px double #666;
       position: relative;
       left: 110px;
-      top: 180px;
+      top: -10px;
       z-index: -1;
     }
     @keyframes dance {
@@ -126,10 +124,6 @@
       top: 200px;
       left: 400px;
     }
-    button {
-      position: relative;
-      top: 190px;
-    }
   </style>
 </head>
 <body>
@@ -152,12 +146,12 @@
 
   <script>
     //when laser eyes button is clicked, toggle laser class on brain
-    $(".flash").click(function(){
+    $(".flash").click(function() {
       $(".brain").toggleClass("laser");
     });
 
     //when change color button is clicked, pick a number between 0 and 255
-    $(".color").click(function(){
+    $(".color").click(function() {
       var red = Math.floor(Math.random() * 255);
       var green = Math.floor(Math.random() * 255);
       var blue = Math.floor(Math.random() * 255);    
