@@ -140,8 +140,14 @@
 
   <button class="flash">Laser eyes ON/OFF</button>
   <button class="color">Change Color</button>
-  <button class="moves">Dance!</button>
+  <button class="moves">Dance</button>
+
+  <!--Just to give the dancer some music to dance to-->
+  <audio id="player" src="song.mp3"/></audio>
+  <button onclick="document.getElementById('player').play()">Play music</button>
+  <button onclick="document.getElementById('player').pause()">Pause music</button>
   
+
   <img src="https://dash.generalassemb.ly/projects/assets/dance_cotter.gif">
 
   <script>
@@ -167,5 +173,6 @@
     $(".moves").click(function() {
       $("img").toggle();
     });
+
   </script>
 </body>
